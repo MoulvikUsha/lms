@@ -1,0 +1,59 @@
+nav {
+  position: sticky;
+  top: 0px;
+  height: 70px;
+  background-color: #ffffff;
+}
+
+.navbar-brand img {
+  width: 75%;
+  margin-left: 15px;
+}
+
+.search {
+  background: url('/assets/images/search.png') no-repeat scroll 8px 10px;
+  padding-left: 30px;
+  background-color: #F4F5F8;
+}
+
+.d-flex {
+  width: 547px;
+  border-radius: 6px;
+}
+
+mat-drawer-container {
+  height: 100vh;
+  z-index: -1;
+}
+
+mat-drawer {
+  position: fixed;
+  top: 70px;
+  cursor: pointer;
+}
+
+mat-drawer button {
+  display: block;
+  position: relative;
+  background-color: white;
+  small {
+    display: block;
+  }
+}
+
+mat-drawer-content {
+  padding: 25px;
+  background-color: #F9F9F9;
+}
+
+.home {
+  display: flex;
+}
+
+.active {
+  background-color: red;
+}
+
+.logout {
+  border: 1px solid #075575;
+}

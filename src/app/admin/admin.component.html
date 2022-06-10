@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="/assets/images/logo1.png" alt="" />
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
+          aria-label="Search" />
+      </form>
+      <button mat-button type="button" class="logout">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="sidenav">
+    <button mat-button class="mat-button" routerLink="batch" [routerLinkActive]="['active']">
+      <img src="/assets/images/Batch.png" alt="" />
+      <small>Batch</small>
+    </button>
+    <button mat-button class="mat-button" routerLink="mentor" [routerLinkActive]="['active']">
+      <img src="/assets/images/team.png" alt="" />
+      <small>Mentor</small>
+    </button>
+    <button mat-button class="mat-button" routerLink="" [routerLinkActive]="['active']">
+      <img src="/assets/images/add-user (2).png" alt="" />
+      <small>Request</small>
+    </button>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="home">
+      <h6>Home</h6>
+      <span class="material-symbols-outlined">chevron_right</span>      
+      <h6>Batch</h6>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
