@@ -6,7 +6,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatTabsModule,
   ],
   exports: [
     CommonModule,
@@ -27,6 +28,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatTabsModule,
   ]
 })
 export class ShareModule { }

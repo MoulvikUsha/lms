@@ -5,7 +5,7 @@ import { AdminComponent } from './admin.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'admin',
+    redirectTo: 'batch',
     pathMatch: 'full'
   },
   {

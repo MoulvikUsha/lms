@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: '/admin/batch',
     pathMatch: 'full'
   },
   {
@@ -17,6 +17,13 @@ const routes: Routes = [
       role: ['Admin']
     },
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'employee',
+    data: {
+      role: ['Employee']
+    },
+    loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
   },
 ];
 

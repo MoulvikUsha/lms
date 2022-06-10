@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MentorRoutingModule } from './mentor-routing.module';
+import { PrimaryInfoRoutingModule } from './primary-info-routing.module';
+import { PrimaryInfoComponent } from './primary-info.component';
 import { ShareModule } from 'src/app/share/share/share.module';
-import { MentorComponent } from './mentor.component';
 
 
 @NgModule({
   declarations: [
-    MentorComponent
+    PrimaryInfoComponent
   ],
   imports: [
     CommonModule,
-    MentorRoutingModule,
+    PrimaryInfoRoutingModule,
     ShareModule
   ]
 })
-export class MentorModule { }
+export class PrimaryInfoModule { }
