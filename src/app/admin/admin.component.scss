@@ -3,6 +3,7 @@ nav {
   top: 0px;
   height: 70px;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 .navbar-brand img {
@@ -23,7 +24,6 @@ nav {
 
 mat-drawer-container {
   height: 100vh;
-  z-index: -1;
 }
 
 mat-drawer {

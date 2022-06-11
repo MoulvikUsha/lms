@@ -25,6 +25,13 @@ const routes: Routes = [
     },
     loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
   },
+  {
+    path: 'mentor',
+    data: {
+      role: ['Mentor']
+    },
+    loadChildren: () => import('./mentor/mentor.module').then(m => m.MentorModule)
+  },
 ];
 
 @NgModule({
