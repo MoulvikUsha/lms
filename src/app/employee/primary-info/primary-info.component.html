@@ -1,1 +1,14 @@
-<p>primary-info works!</p>
+<div class="container-fluid">
+  <form [formGroup]="primaryForm" (ngSubmit)="onSubmit()">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Outline form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>

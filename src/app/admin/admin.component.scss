@@ -35,7 +35,11 @@ mat-drawer {
 mat-drawer button {
   display: block;
   position: relative;
-  background-color: white;
+  border: none;
+  img {
+    width: 22px;
+    background-color: white;
+  }
   small {
     display: block;
   }
@@ -51,7 +55,8 @@ mat-drawer-content {
 }
 
 .active {
-  background-color: red;
+  color: #ffffff;
+  background-color: #086288;
 }
 
 .logout {
