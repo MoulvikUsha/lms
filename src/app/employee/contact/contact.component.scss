@@ -30,6 +30,7 @@
 mat-card {
     margin-top: 30px;
     height: 67px;
+    border: 1px solid #00000029;
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -42,12 +43,7 @@ mat-card {
     pointer-events: none;
 }
 
-.mat-form-field+.mat-form-field {
-    margin-left: 8px;
-}
-
-.add,
-.delete {
+.add, .delete {
     cursor: pointer;
     display: flex;
 }
@@ -55,8 +51,4 @@ mat-card {
 .contact {
     display: grid;
     grid-gap: 20px;
-}
-
-mat-accordion {
-    border: 1px solid #00000029;
 }

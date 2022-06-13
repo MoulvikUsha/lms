@@ -1,0 +1,46 @@
+.count {
+    border: 1px solid #00000014;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.rating {
+    border: 1px solid #00000014;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+mat-card {
+    margin-top: 25px;
+}
+
+:host ::ng-deep canvas {
+        display: block;
+        box-sizing: border-box;
+        width: 872px !important;;
+}
+
+.remock, .mock {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.mock {
+    background-color: #FAA81D;
+    border: #D89119;
+}
+
+.remock {
+    background-color: #086288;
+    border: #075575;
+}
+
+.mocks {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}

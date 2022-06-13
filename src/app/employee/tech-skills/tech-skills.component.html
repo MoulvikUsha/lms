@@ -1,42 +1,53 @@
 <div class="container">
-
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true">
-      <mat-expansion-panel-header>
-        <mat-panel-title></mat-panel-title>
-        <mat-panel-description></mat-panel-description>
-      </mat-expansion-panel-header>
-      <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Skill Type</mat-label>
-            <mat-form-field appearance="outline">
+  <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+    <div class="accordGap">
+      <mat-accordion formArrayName="skillsArray" *ngFor="let contact of getSkills(); let i = index">
+        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
+          <mat-expansion-panel-header>
+            <mat-panel-title></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Skill Type</mat-label>
+              <mat-form-field appearance="outline">
                 <input matInput class="matInput" formControlName="skillType" required>
               </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Skill Rating</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="rating" required>
+              </mat-form-field>
+            </div>
           </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Skill Rating</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="rating" required>
-            </mat-form-field>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Year of Experience (over skill)</mat-label>
+              <mat-form-field appearance="outline">
+                <mat-select formControlName="experience" required>
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Year of Experience (over skill)</mat-label>
-            <mat-form-field appearance="outline">
-              <mat-select formControlName="experience" required>
-                <mat-option value="option1">Married</mat-option>
-                <mat-option value="option2">Unmarried</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-      </form>
-    </mat-expansion-panel>
-  </mat-accordion>
+          <ng-container *ngIf="i>=1">
+            <div class="delete" (click)=" deleteContact(i)">
+              <span class="material-symbols-outlined">delete</span>Delete
+            </div>
+          </ng-container>
+          <ng-container *ngIf="i<1">
+            <div class="add" (click)="addContact()">
+              <span class="material-symbols-outlined">add_circle</span>Add
+            </div>
+          </ng-container>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </form>
 
-  <mat-card>
+  <mat-card class="submission">
     <div class="submit">
       <button mat-raised-button class="previous">Previous</button>
       <button mat-raised-button class="next" [disabled]="skillsForm.invalid">Next</button>

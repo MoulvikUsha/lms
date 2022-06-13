@@ -27,11 +27,6 @@
     justify-content: space-between;
 }
 
-mat-card {
-    margin-top: 30px;
-    height: 67px;
-}
-
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
     display: flex;
     position: absolute;
@@ -44,4 +39,9 @@ mat-card {
 
 .mat-form-field+.mat-form-field {
     margin-left: 8px;
+}
+
+.add, .delete {
+    cursor: pointer;
+    display: flex;
 }

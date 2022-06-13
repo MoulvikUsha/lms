@@ -1,4 +1,5 @@
-::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: #FAA81D;
     height: 4px;
 }
@@ -10,4 +11,82 @@
     white-space: nowrap;
     font-family: system-ui;
     font-size: 18px;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    height: 70px;
+    background-color: #ffffff;
+    z-index: 1;
+    border: 1px solid #0000000A;
+}
+
+.details {
+    height: 45px; 
+    a {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+
+.navbar-brand img {
+    width: 75%;
+    margin-left: 15px;
+}
+
+.search {
+    background: url('/assets/images/search.png') no-repeat scroll 8px 10px;
+    padding-left: 30px;
+    background-color: #F4F5F8;
+}
+
+.d-flex {
+    width: 547px;
+    border-radius: 6px;
+}
+
+mat-drawer-container {
+    height: 100vh;
+}
+
+mat-drawer {
+    position: fixed;
+    top: 70px;
+    cursor: pointer;
+}
+
+mat-drawer button {
+    display: block;
+    position: relative;
+    top: 35px;
+    border: none;
+    background-color: #086288;
+
+    img {
+        width: 25px;
+    }
+
+    small {
+        display: block;
+        color: white;
+        font-weight: 400;
+    }
+}
+
+mat-drawer-content {
+    padding: 25px;
+    background-color: #F9F9F9;
+}
+
+.home {
+    display: flex;
+}
+
+.active {
+    color: #ffffff;
+    background-color: #086288;
+}
+
+.logout {
+    border: 1px solid #075575;
 }

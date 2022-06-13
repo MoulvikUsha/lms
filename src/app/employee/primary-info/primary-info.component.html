@@ -56,7 +56,11 @@
       <div class="col-md-6">
         <mat-label class="d-block">Gender</mat-label>
         <mat-form-field appearance="outline">
-          <input matInput class="matInput" formControlName="gender" required>
+          <mat-select formControlName="gender" required>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="transgender">Transgender</mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
     </div>
@@ -76,7 +80,7 @@
     </div>
   </form>
 
-  <mat-card>
+  <mat-card class="submission">
     <div class="submit">
       <button mat-raised-button class="next" [disabled]="primaryForm.invalid">Next</button>
     </div>

@@ -44,6 +44,10 @@ const routes: Routes = [
         path: 'contact',
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
+      {
+        path: 'mock-rating',
+        loadChildren: () => import('./mock/mock.module').then(m => m.MockModule)
+      },
     ]
   },
 ];

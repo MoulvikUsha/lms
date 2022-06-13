@@ -1,74 +1,85 @@
 <div class="container">
-
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true">
-      <mat-expansion-panel-header>
-        <mat-panel-title></mat-panel-title>
-        <mat-panel-description></mat-panel-description>
-      </mat-expansion-panel-header>
-      <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Educaton Type</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="eduType" required>
-            </mat-form-field>
+  <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
+    <div class="accordGap">
+      <mat-accordion formArrayName="educationArray" *ngFor="let contact of getEduDetails(); let i = index">
+        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
+          <mat-expansion-panel-header>
+            <mat-panel-title></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Educaton Type</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="eduType" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Year of Passing</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="passing" required>
+              </mat-form-field>
+            </div>
           </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Year of Passing</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="passing" required>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Percentage (%)</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="percentage" required>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">University Name</mat-label>
-            <mat-form-field appearance="outline">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Percentage (%)</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="percentage" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">University Name</mat-label>
+              <mat-form-field appearance="outline">
                 <mat-select formControlName="university" required>
                   <mat-option value="option1">Married</mat-option>
                   <mat-option value="option2">Unmarried</mat-option>
                 </mat-select>
-            </mat-form-field>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Institute Name</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="institute" required>
-            </mat-form-field>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Institute Name</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="institute" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Specialization</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="specialization" required>
+              </mat-form-field>
+            </div>
           </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Specialization</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="specialization" required>
-            </mat-form-field>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">State</mat-label>
+              <mat-form-field appearance="outline">
+                <mat-select formControlName="state" required>
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">State</mat-label>
-            <mat-form-field appearance="outline">
-              <mat-select formControlName="state" required>
-                <mat-option value="option1">Married</mat-option>
-                <mat-option value="option2">Unmarried</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-      </form>
-    </mat-expansion-panel>
-  </mat-accordion>
+          <ng-container *ngIf="i>=1">
+            <div class="delete" (click)=" deleteContact(i)">
+              <span class="material-symbols-outlined">delete</span>Delete
+            </div>
+        </ng-container>
+          <ng-container *ngIf="i<1">
+            <div class="add" (click)="addContact()">
+              <span class="material-symbols-outlined" >add_circle</span>Add
+            </div>
+          </ng-container>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </form>
 
 
-  <mat-card>
+  <mat-card class="submission">
     <div class="submit">
       <button mat-raised-button class="previous">Previous</button>
       <button mat-raised-button class="next" [disabled]="educationForm.invalid">Next</button>

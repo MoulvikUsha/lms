@@ -1,82 +1,93 @@
 <div class="container">
-
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true">
-      <mat-expansion-panel-header>
-        <mat-panel-title></mat-panel-title>
-        <mat-panel-description></mat-panel-description>
-      </mat-expansion-panel-header>
-      <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Address Type</mat-label>
-            <mat-form-field appearance="outline">
-              <mat-select formControlName="addressType" required>
-                <mat-option value="option1">Married</mat-option>
-                <mat-option value="option2">Unmarried</mat-option>
-              </mat-select>
-            </mat-form-field>
+  <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <div class="accordGap">
+      <mat-accordion formArrayName="addressArray" *ngFor="let contact of getAddress(); let i = index">
+        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
+          <mat-expansion-panel-header>
+            <mat-panel-title></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Address Type</mat-label>
+              <mat-form-field appearance="outline">
+                <mat-select formControlName="addressType" required>
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Door No.</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="door" required>
+              </mat-form-field>
+            </div>
           </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Door No.</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="door" required>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">Street</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="street" required>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Locality</mat-label>
-            <mat-form-field appearance="outline">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Street</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="street" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Locality</mat-label>
+              <mat-form-field appearance="outline">
                 <input matInput class="matInput" formControlName="locality" required>
-            </mat-form-field>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">City</mat-label>
-            <mat-form-field appearance="outline">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">City</mat-label>
+              <mat-form-field appearance="outline">
                 <mat-select formControlName="city" required>
-                    <mat-option value="option1">Married</mat-option>
-                    <mat-option value="option2">Unmarried</mat-option>
-                  </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">State</mat-label>
-            <mat-form-field appearance="outline">
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">State</mat-label>
+              <mat-form-field appearance="outline">
                 <mat-select formControlName="state" required>
-                    <mat-option value="option1">Married</mat-option>
-                    <mat-option value="option2">Unmarried</mat-option>
-                  </mat-select>
-            </mat-form-field>
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <mat-label class="d-block">PIN Code</mat-label>
-            <mat-form-field appearance="outline">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">PIN Code</mat-label>
+              <mat-form-field appearance="outline">
                 <input matInput class="matInput" formControlName="pinCode" required>
-            </mat-form-field>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Land Mark</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="landMark" required>
+              </mat-form-field>
+            </div>
           </div>
-          <div class="col-md-6">
-            <mat-label class="d-block">Land Mark</mat-label>
-            <mat-form-field appearance="outline">
-              <input matInput class="matInput" formControlName="landMark" required>
-            </mat-form-field>
-          </div>
-        </div>
-      </form>
-    </mat-expansion-panel>
-  </mat-accordion>
+          <ng-container *ngIf="i>=1">
+            <div class="delete" (click)=" deleteContact(i)">
+              <span class="material-symbols-outlined">delete</span>Delete
+            </div>
+          </ng-container>
+          <ng-container *ngIf="i<1">
+            <div class="add" (click)="addContact()">
+              <span class="material-symbols-outlined">add_circle</span>Add
+            </div>
+          </ng-container>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </form>
 
-  <mat-card>
+  <mat-card class="submission">
     <div class="submit">
       <button mat-raised-button class="previous">Previous</button>
       <button mat-raised-button class="next" [disabled]="addressForm.invalid">Next</button>

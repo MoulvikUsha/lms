@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 
 .previous {
     color: #ffffff;
@@ -16,4 +23,33 @@ body { margin: 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet 
     background-color: #086288;
     border: 1px solid #075575;
     font-weight: 400;
+}
+
+.submission {
+    margin-top: 30px;
+    height: 67px;
+    border: 1px solid #00000029;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+
+mat-accordion {
+    border: 1px solid #00000029;
+}
+
+.accordGap {
+    display: grid;
+    grid-gap: 20px;
+}
+
+:host ::ng-deep .mat-form-field-appearance-outline {
+    padding: 1em 0 1em 0;
+    border: #c70a0a !important;
+}
+
+mat-card {
+    border: 1px solid #E9EEF7;
 }

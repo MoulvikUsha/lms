@@ -30,6 +30,7 @@
 mat-card {
     margin-top: 30px;
     height: 67px;
+    border: 1px solid #00000029;
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -44,4 +45,14 @@ mat-card {
 
 .mat-form-field+.mat-form-field {
     margin-left: 8px;
+}
+
+.add, .delete {
+    cursor: pointer;
+    display: flex;
+}
+
+.experience {
+    display: grid;
+    grid-gap: 20px;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-education-details',
@@ -11,8 +11,15 @@ export class EducationDetailsComponent implements OnInit {
   educationForm: FormGroup;
   panelOpenState = false;
 
-  constructor(private fb: FormBuilder) { 
+
+  constructor(private fb: FormBuilder) {
     this.educationForm = this.fb.group({
+      educationArray: this.fb.array([this.createContact()])
+    })
+  }
+
+  createContact(): FormGroup {
+    return this.fb.group({
       eduType: ['', Validators.required],
       passing: ['', Validators.required],
       percentage: ['', Validators.required],
@@ -23,6 +30,19 @@ export class EducationDetailsComponent implements OnInit {
     })
   }
 
+  addContact() {
+    const control = this.educationForm.get('educationArray') as FormArray;
+    control.push(this.createContact());
+  }
+
+  deleteContact(idx: number) {
+    const control = <FormArray>this.educationForm.get('educationArray')
+    control.removeAt(idx);
+  }
+
+  getEduDetails() {
+    return (this.educationForm.get('educationArray') as FormArray).controls;
+  }
   ngOnInit(): void {
   }
 

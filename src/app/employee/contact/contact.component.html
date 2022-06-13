@@ -1,6 +1,6 @@
 <div class="container">
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <div class="contact">
+    <div class="accordGap">
       <mat-accordion formArrayName="contactsArray" *ngFor="let contact of getContact(); let i = index">
         <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
           <mat-expansion-panel-header>
@@ -23,23 +23,23 @@
                 <input matInput class="matInput" formControlName="contactNumber" required>
               </mat-form-field>
             </div>
-            <ng-container *ngIf="i<1">
-              <div class="add">
-                <span class="material-symbols-outlined" (click)="addContact()">add_circle</span>Add
-              </div>
-            </ng-container>
-            <ng-container *ngIf="i>=1">
-              <div class="delete">
-                <span class="material-symbols-outlined" (click)=" deleteContact(i)">delete</span>Delete
-              </div>
-            </ng-container>
           </div>
+          <ng-container *ngIf="i>=1">
+            <div class="delete" (click)=" deleteContact(i)">
+              <span class="material-symbols-outlined">delete</span>Delete
+            </div>
+          </ng-container>
+          <ng-container *ngIf="i<1">
+            <div class="add" (click)="addContact()">
+              <span class="material-symbols-outlined">add_circle</span>Add
+            </div>
+          </ng-container>
         </mat-expansion-panel>
       </mat-accordion>
     </div>
   </form>
 
-  <mat-card>
+  <mat-card class="submission">
     <div class="submit">
       <button mat-raised-button class="previous">Previous</button>
       <button mat-raised-button class="next" [disabled]="contactForm.invalid">Submit</button>
