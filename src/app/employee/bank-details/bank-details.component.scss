@@ -23,7 +23,8 @@
 }
 
 .submit {
-    float: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 mat-card {

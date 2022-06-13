@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-primary-info',
@@ -8,11 +8,20 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class PrimaryInfoComponent implements OnInit {
 
-  primaryForm !: FormGroup;
+  primaryForm : FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.primaryForm = this.fb.group({
-
+      empId: ['', Validators.required],
+      empName: ['', Validators.required],
+      joining: ['', Validators.required],
+      birth: ['', Validators.required],
+      email: ['', Validators.required],
+      blood: ['', Validators.required],
+      designation: ['', Validators.required],
+      gender: ['', Validators.required],
+      nationality: ['', Validators.required],
+      status: ['', Validators.required],
     })
   }
 

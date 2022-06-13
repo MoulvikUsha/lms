@@ -1,14 +1,85 @@
-<div class="container-fluid">
+<div class="container">
   <form [formGroup]="primaryForm" (ngSubmit)="onSubmit()">
-    <div class="row align-items-center">
+    <div class="row">
       <div class="col-md-6">
+        <mat-label class="d-block">Employee ID</mat-label>
         <mat-form-field appearance="outline">
-          <mat-label>Outline form field</mat-label>
-          <input matInput placeholder="Placeholder">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Hint</mat-hint>
+          <input matInput class="matInput" formControlName="empId" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Employee Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="empName" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Date of Joining</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput [matDatepicker]="picker" formControlName="joining" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Date of Birth</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput [matDatepicker]="birth" formControlName="birth" required>
+          <mat-datepicker-toggle matSuffix [for]="birth"></mat-datepicker-toggle>
+          <mat-datepicker #birth></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">E-mail ID</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="email" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Blood Group</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="blood" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Designation</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="designation" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Gender</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="gender" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Nationality</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="nationality" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Employee Status</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="status" required>
         </mat-form-field>
       </div>
     </div>
   </form>
+
+  <mat-card>
+    <div class="submit">
+      <button mat-raised-button class="next" [disabled]="primaryForm.invalid">Next</button>
+    </div>
+  </mat-card>
+
 </div>

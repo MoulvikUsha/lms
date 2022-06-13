@@ -1,0 +1,49 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="contact">
+      <mat-accordion formArrayName="contactsArray" *ngFor="let contact of getContact(); let i = index">
+        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
+          <mat-expansion-panel-header>
+            <mat-panel-title></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-label class="d-block">Contact Type</mat-label>
+              <mat-form-field appearance="outline">
+                <mat-select formControlName="contactType" required>
+                  <mat-option value="option1">Married</mat-option>
+                  <mat-option value="option2">Unmarried</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-label class="d-block">Contact Number</mat-label>
+              <mat-form-field appearance="outline">
+                <input matInput class="matInput" formControlName="contactNumber" required>
+              </mat-form-field>
+            </div>
+            <ng-container *ngIf="i<1">
+              <div class="add">
+                <span class="material-symbols-outlined" (click)="addContact()">add_circle</span>Add
+              </div>
+            </ng-container>
+            <ng-container *ngIf="i>=1">
+              <div class="delete">
+                <span class="material-symbols-outlined" (click)=" deleteContact(i)">delete</span>Delete
+              </div>
+            </ng-container>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </form>
+
+  <mat-card>
+    <div class="submit">
+      <button mat-raised-button class="previous">Previous</button>
+      <button mat-raised-button class="next" [disabled]="contactForm.invalid">Submit</button>
+    </div>
+  </mat-card>
+
+</div>

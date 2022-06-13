@@ -23,11 +23,12 @@
 }
 
 .submit {
-    float: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 mat-card {
-    width: 95%;
+    margin-top: 30px;
     height: 67px;
 }
 
@@ -39,4 +40,8 @@ mat-card {
     right: 0;
     bottom: 0;
     pointer-events: none;
+}
+
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
 }

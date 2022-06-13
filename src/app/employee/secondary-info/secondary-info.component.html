@@ -1,0 +1,65 @@
+<div class="container">
+  <form [formGroup]="secondaryForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">PAN No.</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="pan" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Aadhaar No.</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="aadhaar" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Father Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="father" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Mother Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="mother" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Spouse Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="spouse" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-label class="d-block">Passport No.</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput class="matInput" formControlName="passport" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-label class="d-block">Marital Status</mat-label>
+        <mat-form-field appearance="outline">
+            <mat-select  formControlName="maritalStatus" required>
+              <mat-option value="option1">Married</mat-option>
+              <mat-option value="option2">Unmarried</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+  <mat-card>
+    <div class="submit">
+      <button mat-raised-button class="previous">Previous</button>
+      <button mat-raised-button class="next" [disabled]="secondaryForm.invalid">Next</button>
+    </div>
+  </mat-card>
+
+</div>
