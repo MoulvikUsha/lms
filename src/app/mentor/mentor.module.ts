@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MentorRoutingModule } from './mentor-routing.module';
 import { MentorComponent } from './mentor.component';
+import { ShareModule } from '../share/share/share.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MentorComponent } from './mentor.component';
   ],
   imports: [
     CommonModule,
-    MentorRoutingModule
+    MentorRoutingModule,
+    ShareModule
   ]
 })
 export class MentorModule { }

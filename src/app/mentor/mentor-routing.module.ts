@@ -5,13 +5,22 @@ import { MentorComponent } from './mentor.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'mentor',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
     path: '',
     component: MentorComponent,
-    children: []
+    children: [
+      {
+        path:'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path:'batch',
+        loadChildren: () => import('./batch/batch.module').then(m => m.BatchModule)
+      },
+    ]
   },
 ];
 

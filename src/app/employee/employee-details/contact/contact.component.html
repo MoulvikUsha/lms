@@ -41,8 +41,8 @@
 
   <mat-card class="submission">
     <div class="submit">
-      <button mat-raised-button class="previous">Previous</button>
-      <button mat-raised-button class="next" [disabled]="contactForm.invalid">Submit</button>
+      <button mat-raised-button class="previous" routerLink="experience">Previous</button>
+      <button mat-raised-button class="next" [disabled]="contactForm.invalid" routerLink="approve">Submit</button>
     </div>
   </mat-card>
 

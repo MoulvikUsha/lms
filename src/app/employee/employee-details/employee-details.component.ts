@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
+
+export interface ExampleTab {
+  label: string;
+  route: string;
+}
 
 @Component({
   selector: 'app-employee-details',
@@ -7,7 +13,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  constructor() { }
+  asyncTabs: Observable<ExampleTab[]>;
+
+  constructor() { 
+    this.asyncTabs = new Observable((observer: Observer<ExampleTab[]>) => {
+      setTimeout(() => {
+        observer.next([
+          {label: 'First', route: 'primary'},
+          {label: 'Second', route: 'Content 2'},
+          {label: 'Third', route: 'Content 3'},
+        ]);
+      }, 1000);
+    });
+  }
 
   ngOnInit(): void {
   }
