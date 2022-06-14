@@ -1,0 +1,25 @@
+.primary-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gap {
+   display: grid;
+   grid-gap: 20px;
+}
+
+.submit {
+    display: flex;
+    justify-content: end;
+}
+
+.ok {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body {
+    h2 {
+        text-align: center;
+    }
+}

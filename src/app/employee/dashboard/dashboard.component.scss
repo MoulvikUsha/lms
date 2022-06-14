@@ -76,3 +76,21 @@ mat-drawer-content {
 .logout {
     border: 1px solid #075575;
 }
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: transparent;
+    outline: none !important;
+}
+
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 75%;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

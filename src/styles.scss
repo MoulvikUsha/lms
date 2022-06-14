@@ -53,3 +53,27 @@ mat-accordion {
 mat-card {
     border: 1px solid #E9EEF7;
 }
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(46, 45, 45, 0.6);
+}
+
+.modal-footer {
+    justify-content: none;
+    margin: auto;
+    padding: 0.15rem;
+    border-top: none;
+    margin-bottom: 30px !important;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 2rem !important;
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
