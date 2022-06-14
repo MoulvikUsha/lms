@@ -1,0 +1,19 @@
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 15px;
+}
+
+.submission {
+    h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .return {
+        display: flex;
+        justify-content: center;
+    }
+}

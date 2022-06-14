@@ -2,7 +2,7 @@
   <form [formGroup]="experienceForm" (ngSubmit)="onSubmit()">
     <div class="experience">
       <mat-accordion formArrayName="experienceArray" *ngFor="let contact of getExperience(); let i = index">
-        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i">
+        <mat-expansion-panel (opened)="panelOpenState = true" [formGroupName]="i" [expanded]="step === 0">
           <mat-expansion-panel-header>
             <mat-panel-title></mat-panel-title>
             <mat-panel-description></mat-panel-description>

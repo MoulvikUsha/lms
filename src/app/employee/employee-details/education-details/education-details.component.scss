@@ -1,5 +1,5 @@
 .container {
-    padding: 80pxS;
+    padding: 50px;
 }
 
 .mat-form-field {
@@ -10,7 +10,6 @@
 }
 
 @media (min-width: 1400px) {
-
     .container,
     .container-lg,
     .container-md,
@@ -18,19 +17,13 @@
     .container-xl,
     .container-xxl {
         max-width: 1320px;
-        padding: 80px;
+        padding: 30px;
     }
 }
 
 .submit {
     display: flex;
     justify-content: space-between;
-}
-
-mat-card {
-    margin-top: 30px;
-    height: 67px;
-    border: 1px solid #00000029;
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -43,12 +36,11 @@ mat-card {
     pointer-events: none;
 }
 
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
 .add, .delete {
     cursor: pointer;
     display: flex;
-}
-
-.contact {
-    display: grid;
-    grid-gap: 20px;
 }

@@ -10,6 +10,7 @@ export class TechSkillsComponent implements OnInit {
 
   skillsForm: FormGroup;
   panelOpenState = false;
+  step = 0;
 
   constructor(private fb: FormBuilder) {
     this.skillsForm = this.fb.group({

@@ -10,6 +10,7 @@ export class AddressDetailsComponent implements OnInit {
 
   addressForm: FormGroup;
   panelOpenState = false;
+  step = 0;
 
   constructor(private fb: FormBuilder) {
     this.addressForm = this.fb.group({

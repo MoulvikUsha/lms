@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   panelOpenState = false;
   contactsArray: FormArray | any;
+  step = 0;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({

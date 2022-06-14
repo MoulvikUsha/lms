@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApproveComponent } from './employee-details/approve/approve.component';
 import { EmployeeComponent } from './employee.component';
 
 const routes: Routes = [
@@ -13,40 +14,16 @@ const routes: Routes = [
     component: EmployeeComponent,
     children: [
       {
-        path: 'primary',
-        loadChildren: () => import('./primary-info/primary-info.module').then(m => m.PrimaryInfoModule)
+        path: 'employee-details',
+        loadChildren: () => import('./employee-details/employee-details.module').then(m => m.EmployeeDetailsModule)
       },
       {
-        path: 'secondary',
-        loadChildren: () => import('./secondary-info/secondary-info.module').then(m => m.SecondaryInfoModule)
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'education',
-        loadChildren: () => import('./education-details/education-details.module').then(m => m.EducationDetailsModule)
-      },
-      {
-        path: 'address',
-        loadChildren: () => import('./address-details/address-details.module').then(m => m.AddressDetailsModule)
-      },
-      {
-        path: 'bank',
-        loadChildren: () => import('./bank-details/bank-details.module').then(m => m.BankDetailsModule)
-      },
-      {
-        path: 'skills',
-        loadChildren: () => import('./tech-skills/tech-skills.module').then(m => m.TechSkillsModule)
-      },
-      {
-        path: 'experience',
-        loadChildren: () => import('./experience/experience.module').then(m => m.ExperienceModule)
-      },
-      {
-        path: 'contact',
-        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
-      },
-      {
-        path: 'mock-rating',
-        loadChildren: () => import('./mock/mock.module').then(m => m.MockModule)
+        path: 'approve',
+        component: ApproveComponent
       },
     ]
   },

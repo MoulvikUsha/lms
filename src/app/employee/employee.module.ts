@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
 import { ShareModule } from '../share/share/share.module';
-import { ApproveComponent } from './approve/approve.component';
+import { ApproveComponent } from './employee-details/approve/approve.component';
 
 
 @NgModule({

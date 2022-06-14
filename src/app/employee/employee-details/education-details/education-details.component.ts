@@ -10,7 +10,7 @@ export class EducationDetailsComponent implements OnInit {
 
   educationForm: FormGroup;
   panelOpenState = false;
-
+  step = 0;
 
   constructor(private fb: FormBuilder) {
     this.educationForm = this.fb.group({

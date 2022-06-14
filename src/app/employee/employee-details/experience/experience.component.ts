@@ -11,6 +11,7 @@ export class ExperienceComponent implements OnInit {
  
   experienceForm: FormGroup;
   panelOpenState = false;
+  step = 0;
 
   constructor(private fb: FormBuilder) { 
     this.experienceForm = this.fb.group({
