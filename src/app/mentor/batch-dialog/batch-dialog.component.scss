@@ -4,7 +4,6 @@ mat-dialog-content {
 
 .action {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .slider.round {
@@ -15,7 +14,7 @@ mat-dialog-content {
     position: absolute;
     cursor: pointer;
     top: 16px;
-    left: 18px;
+    left: 22px;
     right: 8px;
     bottom: -5px;
     background-color: grey;
@@ -23,6 +22,12 @@ mat-dialog-content {
 }
 
 .currentDiagnosisToggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+.currentDiagnosisToggle2 {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -70,6 +75,9 @@ button, input, optgroup, select, textarea {
 
 input:checked + .slider {
     background-color: #13BC07;
+}
+.currentDiagnosisToggle2 input:checked + .slider {
+    background-color: #CA0202;
 }
 
 input:checked + .slider:before {
