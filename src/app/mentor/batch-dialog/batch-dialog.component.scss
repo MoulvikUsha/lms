@@ -6,3 +6,72 @@ mat-dialog-content {
     display: flex;
     justify-content: space-evenly;
 }
+
+.slider.round {
+    border-radius: 50px !important;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    left: 18px;
+    right: 8px;
+    bottom: -5px;
+    background-color: grey;
+    transition: 0.4s;
+}
+
+.currentDiagnosisToggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    display: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 15px;
+    left: -10px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.on {
+    color: white;
+    position: absolute;
+    transform: translate(-131%, -45%);
+    top: 50%;
+    left: 62%;
+    font-size: 12px;
+    display: none;
+}
+
+.off {
+    color: white;
+    position: absolute;
+    transform: translate(-131%, -45%);
+    top: 50%;
+    left: 90%;
+    font-size: 12px;
+}
+
+input:checked + .slider {
+    background-color: #13BC07;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}

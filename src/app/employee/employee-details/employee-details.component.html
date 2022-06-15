@@ -1,23 +1,29 @@
-<nav mat-tab-nav-bar class="details">
-  <a mat-tab-link *ngFor="let link of links" [routerLink]="link.route" routerLinkActive #rla="routerLinkActive"
-    [class.active]="rla.isActive">{{link.label}}
-  </a>
-</nav>
-
-<!-- 
-<mat-tab-group>
-  <mat-tab *ngFor="let tab of asyncTabs | async" [routerLink]="tab.route" routerLinkActive #rla="routerLinkActive"
-  [class.active]="rla.isActive">
-  <ng-template mat-tab-label>{{tab.label}}</ng-template>
-  {{tab.route}}
-</mat-tab>
-</mat-tab-group> -->
-
-<mat-tab-group mat-tab-link *ngFor="let link of links" [routerLink]="link.route" routerLinkActive #rla="routerLinkActive"
-[class.active]="rla.isActive">{{link.label}}
-  <!-- <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab> -->
-</mat-tab-group>
-
-<router-outlet></router-outlet>
+<div class="container-fluid py-5">
+  <div class="details">
+    <a routerLink="primary" routerLinkActive="active">Primary Info
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="secondary" routerLinkActive="active">Secondary Info
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="education" routerLinkActive="active">Education Details
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="address" routerLinkActive="active">Address Details
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="bank" routerLinkActive="active">Bank Details
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="skills" routerLinkActive="active">Technical Skills
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="experience" routerLinkActive="active">Experience
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+    <a routerLink="contact" routerLinkActive="active">Contact
+      <hr style="height:5px;color:#FAA81D;background-color:#FAA81D">
+    </a>
+  </div>
+  <router-outlet></router-outlet>
+</div>

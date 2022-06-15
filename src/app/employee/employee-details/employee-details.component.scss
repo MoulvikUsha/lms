@@ -1,30 +1,25 @@
-::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
-.mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #FAA81D;
-    height: 4px;
-}
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    hr {
+        display: none;
+    }
 
-::ng-deep .mat-tab-label .mat-tab-label-content {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    font-family: system-ui;
-}
+    a {
+        text-decoration: none;
+        color: #717171;
+    }
 
-.mat-tab-link {
-    color: #086288;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.mat-tab-label {
-    font-size: 10px !important;
-    .mat-tab-link .hover{
+    .active {
+        font-size: 30px;
         color: #086288;
-        font-family: Roboto, "Helvetica Neue", sans-serif;
-        font-size: 16px;
         font-weight: 500;
+
+        hr {
+            display: block;
+            width: 60%;
+        }
     }
 }

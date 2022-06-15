@@ -1,0 +1,56 @@
+<div class="matTable">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #FAA81D;">
+              <b>Batch List</b>
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="searchBatch form-control me-2" type="search" placeholder="Search Mentor/Employee"
+            aria-label="Search" />
+        </form>
+        <button mat-button type="button" class="newBatch">New Batch</button>
+      </div>
+    </div>
+  </nav>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>
+          <mat-checkbox class="example-margin"></mat-checkbox>
+        </td>
+        <th scope="col">No</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Mocks Taken</th>
+        <th scope="col">Mock Ratings</th>
+        <th scope="col">Attendance</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <mat-checkbox class="example-margin"></mat-checkbox>
+        </td>
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Mark</td>
+        <td class="action">
+          <button mat-button>Give Rating</button>
+        </td>
+        <td><span class="material-symbols-outlined" routerLink="emp-list">chevron_right</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

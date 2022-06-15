@@ -20,6 +20,10 @@ const routes: Routes = [
         path:'batch',
         loadChildren: () => import('./batch/batch.module').then(m => m.BatchModule)
       },
+      {
+        path:'emp-list',
+        loadChildren: () => import('./emp-list/emp-list.module').then(m => m.EmpListModule)
+      },
     ]
   },
 ];
