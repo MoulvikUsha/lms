@@ -43,9 +43,15 @@
         <td>Mark</td>
         <td>Otto</td>
         <td>Mark</td>
-        <td>Otto</td>
+        <td data-bs-toggle="modal" data-bs-target="#exampleModalMock" style="cursor: pointer;">Otto</td>
         <td>@mdo</td>
-        <td>Mark</td>
+        <td data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+            <select matNativeControl required>
+              <option value="volvo">Active</option>
+              <option value="saab">Absconded</option>
+              <option value="mercedes">Terminated</option>
+            </select>
+        </td>
         <td class="action">
           <button mat-button>Give Rating</button>
         </td>
@@ -53,4 +59,107 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+
+
+<!-- Status Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reason to change Status</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <mat-label>Reason</mat-label>
+        <mat-form-field appearance="outline">
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rating Modal -->
+<div class="modal fade" id="exampleModalMock" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reason to change Status</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <form [formGroup]="ratingForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-label class="d-block">Mock Type</mat-label>
+                  <mat-form-field appearance="outline">
+                    <select matNativeControl class="matInput" formControlName="mockType" required>
+                      <option value="Mock">Mock</option>
+                      <option value="Remock">Remock</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-label class="d-block">Mock Taken by</mat-label>
+                  <mat-form-field appearance="outline">
+                    <input matInput class="matInput" formControlName="mockBy" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-label class="d-block">Technology</mat-label>
+                  <mat-form-field appearance="outline">
+                    <select matNativeControl class="matInput" formControlName="technolgy" required>
+                      <option value="MEAN">MEAN</option>
+                      <option value="MERN">MERN</option>
+                      <option value="MEVN">MEVN</option>
+                      <option value="JAVA">JAVA</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-label class="d-block">Practical Knowledge (out of 100)</mat-label>
+                  <mat-form-field appearance="outline">
+                    <input matInput class="matInput" formControlName="practical" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-label class="d-block">Theoritical Knowledge (out of 100)</mat-label>
+                  <mat-form-field appearance="outline">
+                    <input matInput class="matInput" formControlName="theory" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-label class="d-block">Overall Feedback (Practical + Theoritical)/2</mat-label>
+                  <mat-form-field appearance="outline">
+                    <input matInput class="matInput" formControlName="overall" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-label class="d-block">Detailed Feedback</mat-label>
+                  <mat-form-field appearance="outline">
+                    <textarea matInput class="matInput" formControlName="feedback" required></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button type="button" class="next">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -77,7 +77,7 @@ small .active {
 }
 
 :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: transparent;
+    // color: transparent;
     outline: none !important;
 }
 

@@ -16,8 +16,9 @@ tr {
 
 table thead {
     background-color: #E9EEF7;
+
     tr th {
-      font-weight: 500;
+        font-weight: 500;
     }
 }
 
@@ -32,9 +33,39 @@ table thead {
     background-color: #F4F5F8;
     width: 450px;
     height: 30px;
-  }
+}
 
-  .action :hover {
+.action :hover {
     background-color: #086288;
     color: white;
-  }
+}
+
+.modal-body {
+    position: relative;
+    padding: 1rem !important;
+    display: grid;
+}
+
+.modal-header h5 {
+    font: 500 calc(20px * 0.83)/20px Roboto, "Helvetica Neue", sans-serif !important;
+    margin: 0 0 12px;
+}
+
+.modal-footer button{
+    float: right;
+}
+
+.modal-footer {
+    justify-content: none;
+    margin: 0%;
+    padding: 0.15rem;
+    border-top: none;
+    margin-bottom: 0px !important;
+}
+
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
