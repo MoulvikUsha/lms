@@ -1,19 +1,87 @@
-.loginPage img {
-  background-size: cover;
+.loginPage {
+  background-image: url('/assets/images/bulbBlur.png');
   height: 100vh;
   width: 100%;
+  background-size: cover;
 }
 
-.image img {
+.row {
+  border-radius: 15px;
+}
+
+.image {
+  background-image: url('/assets/images/bulb.png');
   background-size: cover;
+  height: 610px !important;
 }
 
 .details {
   background-color: #000000A2;
+  border-radius: 0px 13px 13px 0px;
 }
 
-.row {
-  width: 75%;
-  border: 1px solid;
-  border-radius: 12px;
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: #FFAA17;
+}
+
+.info {
+  position: relative;
+  top: 80px;
+  width: 70%;
+  margin: auto;
+}
+
+mat-label {
+  color: white;
+}
+
+:host ::ng-deep .mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex .mat-form-field-outline {
+  background-color: white !important;
+}
+
+.submit {
+  display: flex;
+  background-color: #FAA81D;
+  padding: 1px;
+  border-radius: 5px;
+  height: 35px;
+  justify-content: space-between;
+}
+
+.cancel {
+  width: 50%;
+  background-color: #000000A2;
+  color: white;
+  border-radius: 5px;
+
+  p {
+    position: relative;
+    top: 7px;
+    left: 41px;
+  }
+}
+
+.login {
+  position: relative;
+  top: 7px;
+  left: 55px;
+  color: white;
+}
+
+hr {
+  color: #E7E7E7;
+  height: 2px;
+}
+
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 165px;
+  color: white;
+  font-size: 10px;
 }

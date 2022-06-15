@@ -1,9 +1,40 @@
 <div class="loginPage">
-  <img src="/assets/images/bulbBlur.png" alt="">
-  <div class="row">
-    <div class="image col-md-8 p-0">
-      <img src="/assets/images/bulb.png" alt="" class="bulb">
+  <div class="container">
+    <div class="loginn">
+      <div class="row">
+        <div class="image col-md-8"></div>
+        <div class="details col-md-4">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="">
+          </div>
+          <div class="info">
+            <h1>Login</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <mat-label>Employee ID</mat-label>
+                <mat-form-field appearance="outline">
+                  <input matInput formControlName="empId" required="">
+                </mat-form-field>
+                <mat-label>Password</mat-label>
+                <mat-form-field appearance="outline">
+                  <input matInput formControlName="password" required="">
+                </mat-form-field>
+              </div>
+              <div class="submit">
+                <p class="login">LOGIN</p>
+                <div class="cancel">
+                  <p>CANCEL</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <hr style="height:2px;border-width:0;color:#E7E7E7;background-color:#E7E7E7; position: relative;top: 165px;">
+          <div class="copyrights">
+            <p>Copyright 18 Aleercio.com</p>
+            <p>Terms and Conditions | Privacy Policy</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="details col-md-4"></div>
   </div>
 </div>
