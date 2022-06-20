@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BatchDialogRoutingModule } from './batch-dialog-routing.module';
+import { RequestRoutingModule } from './request-routing.module';
+import { RequestComponent } from './request.component';
 import { ShareModule } from 'src/app/share/share/share.module';
-import { BatchDialogComponent } from './batch-dialog.component';
 
 
 @NgModule({
   declarations: [
-    BatchDialogComponent
+    RequestComponent
   ],
   imports: [
     CommonModule,
-    BatchDialogRoutingModule,
+    RequestRoutingModule,
     ShareModule
   ]
 })
-export class BatchDialogModule { }
+export class RequestModule { }

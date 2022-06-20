@@ -18,6 +18,7 @@ export class BatchComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+  
   ngOnInit(): void {
   }
 

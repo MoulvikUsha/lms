@@ -4,16 +4,21 @@ import { CommonModule } from '@angular/common';
 import { MentorRoutingModule } from './mentor-routing.module';
 import { ShareModule } from 'src/app/share/share/share.module';
 import { MentorComponent } from './mentor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MentorDialogComponent } from '../mentor-dialog/mentor-dialog.component';
 
 
 @NgModule({
   declarations: [
-    MentorComponent
+    MentorComponent,
+    MentorDialogComponent
   ],
   imports: [
     CommonModule,
     MentorRoutingModule,
-    ShareModule
+    ShareModule,
+     FormsModule,
+     ReactiveFormsModule
   ]
 })
 export class MentorModule { }

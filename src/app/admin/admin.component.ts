@@ -7,6 +7,7 @@ import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+  batch: boolean = true
   constructor() { }
 
   ngOnInit(): void { }

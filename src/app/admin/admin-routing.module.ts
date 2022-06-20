@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { ApproveComponent } from './approve/approve.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,14 @@ const routes: Routes = [
       {
         path: 'mentor',
         loadChildren: () => import('./mentor/mentor.module').then(m => m.MentorModule)
+      },
+      {
+        path: 'request',
+        loadChildren: () => import('./request/request.module').then(m => m.RequestModule)
+      },
+      {
+        path: 'approve',
+        component: ApproveComponent
       }
     ]
   },

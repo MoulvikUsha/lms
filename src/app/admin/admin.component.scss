@@ -25,6 +25,7 @@ nav {
 
 mat-drawer-container {
   height: 100vh;
+  display: grid;
 }
 
 mat-drawer {
@@ -33,33 +34,61 @@ mat-drawer {
   cursor: pointer;
 }
 
-mat-drawer button {
-  display: block;
-  position: relative;
-  border: none;
-  img {
-    width: 22px;
-    background-color: white;
-  }
-  small {
-    display: block;
-  }
-}
-
 mat-drawer-content {
   padding: 25px;
   background-color: #F9F9F9;
+}
+
+mat-drawer {
+  
+  button {
+    background-color: white;
+    display: block;
+    width: inherit;
+    height: 55px;
+  }
+}
+
+.batch {
+  background: url('/assets/images/Batch.png') no-repeat scroll 0 0;
+  align-items: center;
+}
+
+.mentor {
+  background: url('/assets/images/team.png') no-repeat scroll 0 0;
+}
+
+.request {
+  align-items: center;
+  background: url('/assets/images/request.png') no-repeat scroll 0 0;
 }
 
 .home {
   display: flex;
 }
 
-.active {
+button .active {
   color: #ffffff;
   background-color: #086288;
+
+  .batch {
+    background: url('/assets/images/batchLight.png') no-repeat scroll 0 0;
+  }
+
+
+  .mentor {
+    background: url('/assets/images/teamLight.png') no-repeat scroll 0 0;
+  }
+
+  .request {
+    background: url('/assets/images/requestLight.png') no-repeat scroll 0 0;
+  }
 }
 
 .logout {
   border: 1px solid #075575;
+}
+
+input::placeholder {
+  font: 14px sans-serif;
 }

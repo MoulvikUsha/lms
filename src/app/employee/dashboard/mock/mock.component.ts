@@ -16,6 +16,7 @@ export class MockComponent implements OnInit {
     this.graphPreview();
   }
 
+
   graphPreview() {
     Chart.register(...registerables);
 
@@ -31,44 +32,47 @@ export class MockComponent implements OnInit {
         ],
         datasets: [
           {
-            label: '',
-            // data: this.barChartData,
-            data: [65, 59, 80, 81, 56, 55, 40],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-              'rgba(255, 205, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-            ],
-
-            borderWidth: 1,
+            label: "Mock",
+            barThickness: 25,
+            backgroundColor: "#FAA81D",
+            inflateAmount:-3,
+            data: [3, 7, 5, 14, 5],
+          },
+          {
+            label: "Remock",
+            base: 0,
+            barThickness: 25,
+            inflateAmount: -3,
+            backgroundColor: "#086288",
+            data: [4, 3, 11, 12, 7]
           },
         ],
       },
       options: {
         plugins: {
           legend: {
+            position: 'bottom',
             display: true,
             labels: {
-              boxWidth: 0,
+              boxWidth: 15,
+              usePointStyle: true,
             },
           },
         },
         scales: {
           x: {
+            display: true,
+            stacked: false,
             grid: {
               display: false,
-              drawBorder: false,
-            },
+            }
           },
           y: {
-            display: false,
-            beginAtZero: true,
+            display: true,
+            stacked: true,
             grid: {
               display: false,
-              drawBorder: false,
-            },
+            }
           },
         },
       },
