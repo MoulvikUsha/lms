@@ -7,6 +7,12 @@ nav {
   border: 1px solid #0000000A;
 }
 
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: block !important;
+    flex-basis: auto;
+}}
+
 .navbar-brand img {
   width: 75%;
   margin-left: 15px;
@@ -39,50 +45,8 @@ mat-drawer-content {
   background-color: #F9F9F9;
 }
 
-mat-drawer {
-  
-  button {
-    background-color: white;
-    display: block;
-    width: inherit;
-    height: 55px;
-  }
-}
-
-.batch {
-  background: url('/assets/images/Batch.png') no-repeat scroll 0 0;
-  align-items: center;
-}
-
-.mentor {
-  background: url('/assets/images/team.png') no-repeat scroll 0 0;
-}
-
-.request {
-  align-items: center;
-  background: url('/assets/images/request.png') no-repeat scroll 0 0;
-}
-
 .content {
   display: flex;
-}
-
-button .active {
-  color: #ffffff;
-  background-color: #086288;
-
-  .batch {
-    background: url('/assets/images/batchLight.png') no-repeat scroll 0 0;
-  }
-
-
-  .mentor {
-    background: url('/assets/images/teamLight.png') no-repeat scroll 0 0;
-  }
-
-  .request {
-    background: url('/assets/images/requestLight.png') no-repeat scroll 0 0;
-  }
 }
 
 .logout {
@@ -93,11 +57,61 @@ input::placeholder {
   font: 14px sans-serif;
 }
 
-.items {
+mat-drawer-content .home,
+.link {
   font-weight: 600;
+  font-size: 14px;
+  font-family: Verdana;
 }
 
-mat-drawer-content .home, .items{
-  font-size: 14px;
-  font-family:  Verdana;
+.sidenav .side button {
+  display: block;
+  width: -webkit-fill-available;
+  height: 75px;
+
+  small {
+    position: relative;
+    top: 25px;
+  }
+}
+
+.active {
+  background-color: #075575;
+  color: white;
+
+  .batch {
+    background-image: url('/assets/images/batchLight.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .mentor {
+    background-image: url('/assets/images/teamLight.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .request {
+    background-image: url('/assets/images/requestLight.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.batch {
+  background-image: url('/assets/images/Batch.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.mentor {
+  background-image: url('/assets/images/team.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.request {
+  background-image: url('/assets/images/request.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 }

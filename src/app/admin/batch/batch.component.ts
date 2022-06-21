@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BatchDialogComponent } from '../batch-dialog/batch-dialog.component';
 
@@ -9,6 +9,8 @@ import { BatchDialogComponent } from '../batch-dialog/batch-dialog.component';
 })
 export class BatchComponent implements OnInit {
 
+  @Input() name= 'Batch';
+  
   constructor(public dialog: MatDialog) {}
 
   openDialog() {

@@ -1,18 +1,22 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <div class="row">
+        <div class="col-md-4">
           <a class="nav-link" href="#">
             <img src="/assets/images/logo1.png" alt="" />
           </a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
-          aria-label="Search" />
-      </form>
-      <button mat-button type="button" class="logout">Logout</button>
+        </div>
+        <div class="col-md-7">
+          <form class="d-flex" role="search">
+            <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
+              aria-label="Search" />
+          </form>
+        </div>
+        <div class="col-md-1">
+          <button mat-button type="button" class="logout">Logout</button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
@@ -20,30 +24,25 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened class="sidenav">
 
-    <div class="btnBatch">
-      <button mat-raised-button class="batch" routerLink="batch" [routerLinkActive]="['active']">
+    <div class="side" (click)="items()">
+      <button mat-button class="mat-button batch" routerLink="batch" [routerLinkActive]="['active']">
+        <small>Batch</small>
       </button>
-      <small>Batch</small>
+      <button mat-button class="mat-button mentor" routerLink="mentor" [routerLinkActive]="['active']">
+        <small>Mentor</small>
+      </button>
+      <button mat-button class="mat-button request" routerLink="request" [routerLinkActive]="['active']">
+        <small>Request</small>
+      </button>
     </div>
 
-    <div class="btnMentor">
-      <button mat-raised-button class="mentor" routerLink="mentor" [routerLinkActive]="['active']">
-      </button>
-      <small>Mentor</small>
-    </div>
-
-    <div class="btnRequest">
-      <button mat-raised-button class="request" routerLink="request" [routerLinkActive]="['active']">
-      </button>
-      <small>Request</small>
-    </div>
   </mat-drawer>
 
   <mat-drawer-content>
     <div class="content">
       <h4 class="home">Home</h4>
       <span class="material-symbols-outlined">chevron_right</span>
-      <h4 class="items">
+      <h4 class="link">
         {{item}}
       </h4>
     </div>

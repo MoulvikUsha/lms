@@ -40,10 +40,11 @@ table thead {
     border: 1px solid #00811A80;
     background-color: #00951E1A;
     width: 70px;
-
+    height: 30px;
     span {
         position: relative;
-        right: 6px;
+        bottom: 3px;
+        right: 7px;
     }
 }
 
@@ -52,6 +53,11 @@ table thead {
     border: 1px solid #B2000C80;
     background-color: #CE000E1A;
     width: 70px;
+    height: 30px;
+    span {
+        position: relative;
+        bottom: 3px;
+    }
 }
 
 .action {

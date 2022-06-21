@@ -14,19 +14,19 @@ export class AdminComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.router.url);
-    console.log(this.router.isActive('/admin/batch', true));
-    this.active()
+
   }
 
-  active() {
-    if (this.router.isActive('/admin/batch', true)) {
+  contents = ['Batch', 'Mentor', 'Request']
+
+  items() {
+    if (this.router.url == '/admin/batch') {
       this.item = 'Batch'
-    }
-    else if (this.router.isActive('/admin/mentor', true)) {
+    } 
+    else if (this.router.url == '/admin/mentor') {
       this.item = 'Mentor'
     }
-    else {
+    else{
       this.item = 'Request'
     }
   }

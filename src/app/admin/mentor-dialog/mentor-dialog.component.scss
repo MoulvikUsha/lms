@@ -1,6 +1,11 @@
 ::ng-deep .mat-dialog-container {
     width: 40%;
     margin: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    font: 13px Verdana, Sans-serif;
+    border: 1px solid #DCDCDC;
 }
 
 mat-form-field {
@@ -9,7 +14,7 @@ mat-form-field {
 
 .header h3 {
     color: #086288;
-    font: 18px/24px Open Sans;
+    font: 15px Verdana, Sans-serif;
 }
 
 .footer button {
@@ -36,4 +41,22 @@ mat-form-field {
     max-height: 65vh;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+hr {
+    color: #707070;
+    border: 1px solid;
+}
+
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 75%;
+        margin: auto;
+        font: 13px Verdana, Sans-serif;
+    }
+    mat-label {
+        color: #707070;
+    }
 }
