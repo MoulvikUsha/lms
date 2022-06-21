@@ -1,5 +1,14 @@
 .newBatch {
     background-color: #FAA81D;
+    font: Verdana, Sans-serif;
+}
+
+.nav-link {
+    color: #FAA81D;
+    font: 13px Verdana, Sans-serif;
+   p{
+       font-weight: 500
+   } 
 }
 
 tbody,
@@ -16,8 +25,9 @@ tr {
 
 table thead {
     background-color: #E9EEF7;
+
     tr th {
-      font-weight: 500;
+        font-weight: 500;
     }
 }
 
@@ -32,4 +42,13 @@ table thead {
     background-color: #F4F5F8;
     width: 450px;
     height: 30px;
-  }
+}
+
+input::placeholder {
+    font: 13px Verdana, Sans-serif;
+}
+
+.action {
+    display: flex;
+    justify-content: space-evenly;
+}

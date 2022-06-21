@@ -51,10 +51,11 @@ mat-drawer-content {
 
 .logout {
   border: 1px solid #075575;
+  color: #075575;
 }
 
 input::placeholder {
-  font: 14px sans-serif;
+  font: 13px Verdana, Sans-serif;
 }
 
 mat-drawer-content .home,

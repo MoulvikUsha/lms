@@ -2,6 +2,15 @@
     background-color: #FAA81D;
 }
 
+.nav-link {
+    color: #FAA81D;
+    font: 13px Verdana, Sans-serif;
+
+   p{
+       font-weight: 500
+   } 
+}
+
 tbody,
 td,
 tfoot,
@@ -66,5 +75,5 @@ table thead {
 }
 
 input::placeholder {
-    font: 14px sans-serif;
-}
+    font: 13px Verdana, Sans-serif;
+  }
