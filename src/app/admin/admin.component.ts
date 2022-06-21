@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,26 @@ import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  batch: boolean = true
-  constructor() { }
+  batch: boolean = true;
+  item: string = '';
 
-  ngOnInit(): void { }
+  constructor(private router: Router) { }
 
+  ngOnInit(): void {
+    console.log(this.router.url);
+    console.log(this.router.isActive('/admin/batch', true));
+    this.active()
+  }
+
+  active() {
+    if (this.router.isActive('/admin/batch', true)) {
+      this.item = 'Batch'
+    }
+    else if (this.router.isActive('/admin/mentor', true)) {
+      this.item = 'Mentor'
+    }
+    else {
+      this.item = 'Request'
+    }
+  }
 }

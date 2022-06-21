@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { ApproveComponent } from './approve/approve.component';
+import { StatusComponent } from './status/status.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'approve',
         component: ApproveComponent
+      },
+      {
+        path: 'status',
+        component: StatusComponent
       }
     ]
   },

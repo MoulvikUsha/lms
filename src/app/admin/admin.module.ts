@@ -5,11 +5,13 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { ShareModule } from '../share/share/share.module';
 import { ApproveComponent } from './approve/approve.component';
+import { StatusComponent } from './status/status.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
-    ApproveComponent
+    ApproveComponent,
+    StatusComponent
   ],
   imports: [
     CommonModule,

@@ -63,7 +63,7 @@ mat-drawer {
   background: url('/assets/images/request.png') no-repeat scroll 0 0;
 }
 
-.home {
+.content {
   display: flex;
 }
 
@@ -91,4 +91,13 @@ button .active {
 
 input::placeholder {
   font: 14px sans-serif;
+}
+
+.items {
+  font-weight: 600;
+}
+
+mat-drawer-content .home, .items{
+  font-size: 14px;
+  font-family:  Verdana;
 }
