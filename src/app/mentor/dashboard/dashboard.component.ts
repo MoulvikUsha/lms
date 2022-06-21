@@ -26,22 +26,24 @@ export class DashboardComponent implements OnInit {
       type: 'doughnut',
       data: {
         labels: [
-          'Female',
           'Male',
+          'Female',
         ],
         datasets: [{
           data: [300, 500],
           backgroundColor: [
-            '#ED9232',
             '#182C52',
+            '#ED9232',
           ],
-          hoverOffset: 4
+          hoverOffset: 5,
         }]
       },
       options: {
         cutout: '75%',
+        radius: 80,
         plugins: {
           legend: {
+            position: 'right',
             display: true,
             labels: {
               boxWidth: 200,
@@ -74,7 +76,7 @@ export class DashboardComponent implements OnInit {
               '#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9',
             ],
             borderWidth: 0,
-            borderRadius: 13,
+            barThickness: 12
           },
         ],
       },
@@ -82,9 +84,11 @@ export class DashboardComponent implements OnInit {
         indexAxis: 'y',
         plugins: {
           legend: {
-            display: true,
+            position: 'right',
+            display: false,
             labels: {
-              boxWidth: 0,
+              boxWidth: 15,
+              usePointStyle: true,
             },
           },
         },
@@ -130,7 +134,7 @@ export class DashboardComponent implements OnInit {
               '#02C5E9',
             ],
             borderWidth: 0,
-            borderRadius: 13,
+            barThickness: 12
           },
         ],
       },
@@ -138,9 +142,11 @@ export class DashboardComponent implements OnInit {
         indexAxis: 'y',
         plugins: {
           legend: {
-            display: true,
+            position: 'right',
+            display: false,
             labels: {
-              boxWidth: 0,
+              boxWidth: 15,
+              usePointStyle: true,
             },
           },
         },
@@ -186,6 +192,7 @@ export class DashboardComponent implements OnInit {
       options: {
         plugins: {
           legend: {
+            position: 'right',
             display: true,
             labels: {
               boxWidth: 200,
@@ -196,6 +203,7 @@ export class DashboardComponent implements OnInit {
         },
         scales: {
           x: {
+            display: false,
             grid: {
               display: false,
               drawBorder: false,

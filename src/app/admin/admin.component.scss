@@ -7,11 +7,12 @@ nav {
   border: 1px solid #0000000A;
 }
 
-@media (min-width: 992px){
-.navbar-expand-lg .navbar-collapse {
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
     display: block !important;
     flex-basis: auto;
-}}
+  }
+}
 
 .navbar-brand img {
   width: 75%;
@@ -69,8 +70,8 @@ mat-drawer-content .home,
   display: block;
   width: -webkit-fill-available;
   height: 75px;
-
   small {
+    font: 11px Verdana, Sans-serif;
     position: relative;
     top: 25px;
   }

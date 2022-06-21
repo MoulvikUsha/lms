@@ -32,7 +32,7 @@ body {
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
-    box-shadow: none;
+    // box-shadow: none;
 }
 
 
@@ -43,11 +43,6 @@ mat-accordion {
 .accordGap {
     display: grid;
     grid-gap: 20px;
-}
-
-:host ::ng-deep .mat-form-field-appearance-outline {
-    padding: 1em 0 1em 0;
-    border: #c70a0a !important;
 }
 
 mat-card {

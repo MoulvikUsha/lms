@@ -1,17 +1,19 @@
 h3 {
     font-weight: 500;
+    margin: 0px;
 }
 
-.gender, .performance {
-    width: 70%;
-    height: 70%;
+canvas {
+    // width: 250px;
+    font: Verdana, Sans-serif;
 }
 
-.row mat-card {
-    height: 350px;
+mat-card {
+    height: 80%;
+    border-radius: 8px;
 }
 
 .performance {
-    width: 270px;
-    height: 300px;
+    width: 250px;
+
 }
