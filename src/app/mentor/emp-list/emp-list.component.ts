@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { AddMockComponent } from './add-mock/add-mock.component';
 
 @Component({
   selector: 'app-emp-list',
@@ -10,7 +12,7 @@ export class EmpListComponent implements OnInit {
 
   ratingForm : FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public dialog: MatDialog) {
     this.ratingForm = this.fb.group({
       mockType: ['', Validators.required],
       mockBy: ['', Validators.required],
@@ -22,6 +24,14 @@ export class EmpListComponent implements OnInit {
     })
   }
 
+
+  openDialog() {
+    const dialogRef = this.dialog.open(AddMockComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   ngOnInit(): void {
   }
 

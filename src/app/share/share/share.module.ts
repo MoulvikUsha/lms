@@ -15,6 +15,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {
+  MatMenuModule,
+} from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -36,6 +39,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatNativeDateModule,
     MatSelectModule,
     MatExpansionModule,
+    MatMenuModule,
   ],
   exports: [
     CommonModule,
@@ -53,6 +57,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatNativeDateModule,
     MatSelectModule,
     MatExpansionModule,
+    MatMenuModule,
   ]
 })
 export class ShareModule { }

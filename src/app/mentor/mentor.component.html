@@ -1,53 +1,91 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="/assets/images/logo1.png" alt="" />
-            </a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
-            aria-label="Search" />
-        </form>
-        <div class="profile">
-          <mat-form-field appearance="outline" class="mentor">
+<!-- <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <div class="row">
+        <div class="col-md-4">
+          <a class="nav-link" routerLink="batch">
+            <img src="/assets/images/logo1.png" alt="" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <form class="d-flex" role="search">
+            <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
+              aria-label="Search" />
+          </form>
+        </div>
+        <div class="col-md-2">
+          <div class="profile">
             <div class="user">
-            <img src="/assets/images/add-user (2).png" alt="...">
-            <span class="name">Name</span>
+              <img src="/assets/images/bulb.png" alt="...">
+              <span class="name">Name</span>
+            </div>
+            <mat-form-field appearance="outline" class="mentor">
+              <select matNativeControl required>
+                <option value="Profile">Profile</option>
+                <option value="Change Password">Change Password</option>
+                <option value="Logout">Logout</option>
+              </select>
+            </mat-form-field>
           </div>
-            <select matNativeControl required>
-              <option value="Profile">Profile</option>
-              <option value="Change Password">Change Password</option>
-              <option value="Logout">Logout</option>
-            </select>
-          </mat-form-field>
         </div>
       </div>
     </div>
-  </nav>
-  
-  <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class="sidenav">
-      <button mat-button class="matt-button p-0" routerLink="dashboard" [routerLinkActive]="['active']">
-        <img src="/assets/images/dashboard (3).png" alt="" />
-        <small>Dashboard</small>
-      </button>
-      <button mat-button class="matt-button p-0" routerLink="batch" [routerLinkActive]="['active']">
-        <img src="/assets/images/Batch.png" alt="" />
-        <small>Batch</small>
-      </button>
-    </mat-drawer>
-  
-    <mat-drawer-content>
-      <div class="home">
-        <h4>Home</h4>
-        <span class="material-symbols-outlined">chevron_right</span>
-        <h4>Batch</h4>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="row">
+        <div class="col-md-4">
+          <a class="nav-link" routerLink="batch">
+            <img src="/assets/images/logo1.png" alt="" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <form class="d-flex" role="search">
+            <input class="search form-control me-2" type="search" placeholder="Search Mentor/Employee"
+              aria-label="Search" />
+          </form>
+        </div>
+        <div class="col-md-2">
+          <div class="profile">
+            <div class="user">
+              <img src="/assets/images/bulb.png" alt="...">
+            </div>
+            <button mat-button [matMenuTriggerFor]="menu" class="name">Moulvik
+            <span class="downArrow material-symbols-outlined">keyboard_arrow_down</span>
+          </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Profile</button>
+              <button mat-menu-item>Change Password</button>
+              <button mat-menu-item>Logout</button>
+            </mat-menu>
+          </div>
+        </div>
       </div>
-      <router-outlet></router-outlet>
-    </mat-drawer-content>
-  </mat-drawer-container>
-  
+    </div>
+  </div>
+</nav>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="sidenav">
+    <button mat-button class="matt-button p-0" routerLink="dashboard" [routerLinkActive]="['active']">
+      <img src="/assets/images/dashboard (3).png" alt="" />
+      <small>Dashboard</small>
+    </button>
+    <button mat-button class="matt-button p-0" routerLink="batch" [routerLinkActive]="['active']">
+      <img src="/assets/images/Batch.png" alt="" />
+      <small>Batch</small>
+    </button>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="home">
+      <h4>Home</h4>
+      <span class="material-symbols-outlined">chevron_right</span>
+      <h4>Batch</h4>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

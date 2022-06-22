@@ -40,7 +40,6 @@ export class DashboardComponent implements OnInit {
         }]
       },
       options: {
-        // responsive: false,
         maintainAspectRatio: false,
         cutout: '75%',
         radius: 80,
@@ -73,7 +72,6 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             label: '',
-            // data: this.barChartData,
             data: [65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
               '#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9',
@@ -128,7 +126,6 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             label: '',
-            // data: this.barChartData,
             data: [65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
               '#02C5E9',
@@ -186,8 +183,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             label: '',
-            // data: this.barChartData,
-            data: [15, 19, 8, 2],
+            data: [15, 27, 5, 2],
             backgroundColor: [
               '#FF007C',
               '#FF007C',
@@ -247,7 +243,6 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             label: '',
-            // data: this.barChartData,
             data: [65, 59, 80, 81, 56],
             backgroundColor: ['#39BB5C','#2DB5EE','#E4D402','#EA8604','#E40347'],
             borderWidth: 0,

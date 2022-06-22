@@ -1,0 +1,51 @@
+<mat-dialog-content class="mat-typography">
+    <div class="header">
+      <h3>Add New Batch</h3>
+    </div>
+    <hr>
+    <form [formGroup]="createBatch" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <mat-label class="d-block">Batch Name</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput class="matInput" formControlName="batchName" required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-label class="d-block">Mentor Name</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput class="matInput" formControlName="mentorName" required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-label class="d-block">Technologies</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput class="matInput" formControlName="technology" required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-label class="d-block">Start Date</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="start" formControlName="startBatch" required>
+            <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+            <mat-datepicker #start></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-label class="d-block">End Date</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="end" formControlName="endBatch" required>
+            <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+            <mat-datepicker #end></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer">
+      <button mat-raised-button class="next" [disabled]="createBatch.invalid">Create</button>
+    </div>
+  </form>
+  </mat-dialog-content>
+  

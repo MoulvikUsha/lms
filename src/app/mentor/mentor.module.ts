@@ -10,7 +10,7 @@ import { RatingComponent } from './rating/rating.component';
 @NgModule({
   declarations: [
     MentorComponent,
-    RatingComponent
+    RatingComponent,
   ],
   imports: [
     CommonModule,
