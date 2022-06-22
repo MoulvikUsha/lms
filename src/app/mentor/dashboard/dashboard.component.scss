@@ -1,19 +1,27 @@
 h3 {
-    font-weight: 500;
+    font-weight: 600;
     margin: 0px;
-}
-
-canvas {
-    // width: 250px;
-    font: Verdana, Sans-serif;
+    font-family: Verdana, Sans-serif;
 }
 
 mat-card {
-    height: 80%;
     border-radius: 8px;
 }
 
-.performance {
-    width: 250px;
+#performance {
+    width: 335px;
+    height: 200px;
+}
+
+#gender {
+    width: 335px;
+    height: 206px;
+    position: relative;
+    bottom: 15px;
+}
+
+#degree {
+    height: 200px;
+    width: 335px;
 
 }
