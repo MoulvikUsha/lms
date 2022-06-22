@@ -31,9 +31,9 @@ export class DashboardComponent implements OnInit {
           'Female',
         ],
         datasets: [{
-          data: [300, 500],
+          data: [1300, 500],
           backgroundColor: [
-            '#182C52',
+            '#086288',
             '#ED9232',
           ],
           hoverOffset: 5,
@@ -96,6 +96,7 @@ export class DashboardComponent implements OnInit {
         },
         scales: {
           x: {
+            display: false,
             grid: {
               display: false,
               drawBorder: true,
@@ -154,6 +155,7 @@ export class DashboardComponent implements OnInit {
         },
         scales: {
           x: {
+            display: false,
             grid: {
               display: false,
               drawBorder: true,
