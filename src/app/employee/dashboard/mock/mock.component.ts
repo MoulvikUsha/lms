@@ -35,6 +35,7 @@ export class MockComponent implements OnInit {
             label: "Mock",
             barThickness: 25,
             backgroundColor: "#FAA81D",
+            borderRadius:3,
             inflateAmount:-3,
             data: [3, 7, 5, 14, 5],
           },
@@ -42,6 +43,7 @@ export class MockComponent implements OnInit {
             label: "Remock",
             base: 0,
             barThickness: 25,
+            borderRadius:3,
             inflateAmount: -3,
             backgroundColor: "#086288",
             data: [4, 3, 11, 12, 7]
@@ -49,12 +51,18 @@ export class MockComponent implements OnInit {
         ],
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             position: 'bottom',
+            align : 'end',
             display: true,
             labels: {
-              boxWidth: 15,
+              boxWidth: 10,
+              font: {
+                family: 'Open Sans',
+              },
               usePointStyle: true,
             },
           },
@@ -69,10 +77,11 @@ export class MockComponent implements OnInit {
           },
           y: {
             display: true,
-            stacked: true,
+            labels: ['Excellent', 'Very Good', 'Good', 'Average', 'Bad'],
             grid: {
               display: false,
-            }
+            },
+            
           },
         },
       },

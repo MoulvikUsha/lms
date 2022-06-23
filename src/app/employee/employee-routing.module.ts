@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApproveComponent } from './employee-details/approve/approve.component';
 import { EmployeeComponent } from './employee.component';
 
 const routes: Routes = [
@@ -20,10 +19,6 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-      },
-      {
-        path: 'approve',
-        component: ApproveComponent
       },
     ]
   },

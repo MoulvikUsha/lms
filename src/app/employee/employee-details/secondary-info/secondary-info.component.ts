@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmployeeDetailsComponent } from '../employee-details.component';
 
 @Component({
   selector: 'app-secondary-info',
@@ -10,7 +11,7 @@ export class SecondaryInfoComponent implements OnInit {
 
   secondaryForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, public empDetails: EmployeeDetailsComponent) { 
     this.secondaryForm = this.fb.group({
       pan: ['', Validators.required],
       aadhaar: ['', Validators.required],
@@ -26,6 +27,8 @@ export class SecondaryInfoComponent implements OnInit {
   }
 
   onSubmit() {
-
+    if (this.secondaryForm.valid) {
+      this.empDetails.filled = true
+    }
   }
 }

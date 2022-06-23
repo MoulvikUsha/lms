@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmployeeDetailsComponent } from '../employee-details.component';
 
 @Component({
   selector: 'app-tech-skills',
@@ -12,7 +13,7 @@ export class TechSkillsComponent implements OnInit {
   panelOpenState = false;
   step = 0;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public empDetails: EmployeeDetailsComponent) {
     this.skillsForm = this.fb.group({
       skillsArray: this.fb.array([this.createSkill()])
     })
@@ -44,6 +45,8 @@ export class TechSkillsComponent implements OnInit {
   }
 
   onSubmit() {
-
+    if (this.skillsForm.valid) {
+      this.empDetails.filled6 = true
+    }
   }
 }

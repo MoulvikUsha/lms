@@ -1,5 +1,5 @@
 .container {
-    padding: 80pxS;
+    padding: 30px;
 }
 
 .mat-form-field {
@@ -17,8 +17,7 @@
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1320px;
-        padding: 80px;
+        max-width: 950px;
     }
 }
 
@@ -34,4 +33,10 @@
     right: 0;
     bottom: 0;
     pointer-events: none;
+}
+
+.row {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
 }

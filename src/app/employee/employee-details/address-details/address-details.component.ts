@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmployeeDetailsComponent } from '../employee-details.component';
 
 @Component({
   selector: 'app-address-details',
@@ -12,7 +13,7 @@ export class AddressDetailsComponent implements OnInit {
   panelOpenState = false;
   step = 0;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public empDetails: EmployeeDetailsComponent) {
     this.addressForm = this.fb.group({
       addressArray: this.fb.array([this.createAddress()])
     })
@@ -49,7 +50,9 @@ export class AddressDetailsComponent implements OnInit {
   }
 
   onSubmit() {
-
+    if (this.addressForm.valid) {
+      this.empDetails.filled3 = true
+    }
   }
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmployeeService } from '../../service/employee.service';
+import { EmployeeDetailsComponent } from '../employee-details.component';
 
 @Component({
   selector: 'app-primary-info',
@@ -10,7 +12,7 @@ export class PrimaryInfoComponent implements OnInit {
 
   primaryForm : FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public empDetails: EmployeeDetailsComponent) {
     this.primaryForm = this.fb.group({
       empId: ['', Validators.required],
       empName: ['', Validators.required],
@@ -29,6 +31,8 @@ export class PrimaryInfoComponent implements OnInit {
   }
 
   onSubmit() {
-
+    if (this.primaryForm.valid) {
+      this.empDetails.filled = true
+    }
   }
 }

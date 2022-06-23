@@ -17,8 +17,7 @@
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1320px;
-        padding: 80px;
+        max-width: 950px;
     }
 }
 
@@ -45,4 +44,10 @@
     cursor: pointer;
     display: flex;
     float: right;
+}
+
+.row {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApproveComponent } from './approve/approve.component';
 import { EmployeeDetailsComponent } from './employee-details.component';
 
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
         {
           path: 'contact',
           loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+        },
+        {
+          path: 'approve',
+          component: ApproveComponent
         },
     ]
   }

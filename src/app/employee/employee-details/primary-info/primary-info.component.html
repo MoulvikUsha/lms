@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup]="primaryForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="primaryForm" >
     <div class="row">
       <div class="col-md-6">
         <mat-label class="d-block">Employee ID</mat-label>
@@ -82,7 +82,7 @@
 
   <mat-card class="submission">
     <div class="submit">
-      <button mat-raised-button class="next" [disabled]="primaryForm.invalid" routerLink="../secondary">Next</button>
+      <button mat-raised-button class="next" [disabled]="primaryForm.invalid" routerLink="../secondary" (click)="onSubmit()">Next</button>
     </div>
   </mat-card>
 

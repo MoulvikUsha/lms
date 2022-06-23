@@ -1,19 +1,25 @@
 .mat-card:not([class*=mat-elevation-z]) {
-    box-shadow: none;
     width: 30%;
     height: 30%;
     margin: auto;
     margin-top: 150px;
     border-radius: 15px;
+    padding: 40px;
 }
 
 .submission {
     h3 {
-        font-size: 25px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22px;
         text-align: center;
+        font-weight: bolder;
+        color: #086288;
     }
     .return {
         display: flex;
         justify-content: center;
+        .previous {
+            font-family: 'Open Sans', sans-serif;
+        }
     }
 }

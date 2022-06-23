@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmployeeDetailsComponent } from '../employee-details.component';
 
 @Component({
   selector: 'app-experience',
@@ -13,7 +14,7 @@ export class ExperienceComponent implements OnInit {
   panelOpenState = false;
   step = 0;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, public empDetails: EmployeeDetailsComponent) { 
     this.experienceForm = this.fb.group({
       experienceArray: this.fb.array([this.createExperience()])
     })
@@ -48,6 +49,8 @@ export class ExperienceComponent implements OnInit {
   }
 
   onSubmit() {
-
+    if (this.experienceForm.valid) {
+      this.empDetails.filled7 = true
+    }
   }
 }
