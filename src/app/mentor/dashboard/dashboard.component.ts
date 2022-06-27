@@ -74,7 +74,7 @@ export class DashboardComponent implements OnInit {
             label: '',
             data: [65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
-              '#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9','#02C5E9',
+              '#02C5E9', '#02C5E9', '#02C5E9', '#02C5E9', '#02C5E9', '#02C5E9', '#02C5E9',
             ],
             borderWidth: 0,
             barThickness: 10,
@@ -144,6 +144,9 @@ export class DashboardComponent implements OnInit {
       options: {
         indexAxis: 'y',
         plugins: {
+          tooltip: {
+            displayColors: false,
+          },
           legend: {
             position: 'right',
             display: false,
@@ -193,8 +196,9 @@ export class DashboardComponent implements OnInit {
               '#FF007C',
             ],
             borderWidth: 0,
-            barThickness: 15,
-            borderRadius: 4,
+            barThickness: 12,
+            borderRadius: 8,
+            borderSkipped: false
           },
         ],
       },
@@ -246,7 +250,7 @@ export class DashboardComponent implements OnInit {
           {
             label: '',
             data: [65, 59, 80, 81, 56],
-            backgroundColor: ['#39BB5C','#2DB5EE','#E4D402','#EA8604','#E40347'],
+            backgroundColor: ['#39BB5C', '#2DB5EE', '#E4D402', '#EA8604', '#E40347'],
             borderWidth: 0,
             hoverOffset: 15,
           },
