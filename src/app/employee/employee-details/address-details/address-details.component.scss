@@ -45,11 +45,16 @@ mat-card {
     margin-left: 8px;
 }
 
-.add,
-.delete {
+.add, .delete {
     cursor: pointer;
     display: flex;
     float: right;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: bolder;
+    font-size: 13px;
+    span {
+        font-size: 20px;
+    }
 }
 
 .row {

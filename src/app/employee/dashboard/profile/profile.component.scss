@@ -4,8 +4,8 @@
 }
 
 .gap {
-   display: grid;
-   grid-gap: 20px;
+    display: grid;
+    grid-gap: 20px;
 }
 
 .submit {
@@ -28,4 +28,26 @@ hr {
     border: 1px dashed #001822;
     height: 2px;
     color: #001822;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.details {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    color: #616161;
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
+        color: black
+    }
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
 }

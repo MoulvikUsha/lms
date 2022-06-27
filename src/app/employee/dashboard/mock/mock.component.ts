@@ -33,20 +33,21 @@ export class MockComponent implements OnInit {
         datasets: [
           {
             label: "Mock",
+            base: -1,
             barThickness: 25,
             backgroundColor: "#FAA81D",
             borderRadius:3,
             inflateAmount:-3,
-            data: [3, 7, 5, 14, 5],
+            data: [6, 8, 5, 14, 5],
           },
           {
             label: "Remock",
-            base: 0,
+            base: -1,
             barThickness: 25,
             borderRadius:3,
             inflateAmount: -3,
             backgroundColor: "#086288",
-            data: [4, 3, 11, 12, 7]
+            data: [7, 13, 10, 5, 7]
           },
         ],
       },
@@ -59,9 +60,11 @@ export class MockComponent implements OnInit {
             align : 'end',
             display: true,
             labels: {
+              color: "black",
               boxWidth: 10,
               font: {
-                family: 'Open Sans',
+                // family: 'Open Sans',
+                weight: "600"
               },
               usePointStyle: true,
             },
@@ -72,16 +75,38 @@ export class MockComponent implements OnInit {
             display: true,
             stacked: false,
             grid: {
+              borderColor: "black",
               display: false,
+            },
+            ticks: {
+              color: 'black',
+              font : {
+                // family: 'Open Sans',
+                weight: '600'
+              },
             }
           },
           y: {
-            display: true,
-            labels: ['Excellent', 'Very Good', 'Good', 'Average', 'Bad'],
+            beginAtZero: true,
+            stacked: false,
             grid: {
-              display: false,
+              borderColor: "black",
+              display: false
             },
-            
+            ticks: {
+              labelOffset: -25,
+              showLabelBackdrop: true,
+              color: 'black',
+              font : {
+                // family: 'Open Sans',
+                weight: '600'
+              },
+              callback: function (value:any, index) {                
+                var x = ["Bad", "Average", "Good", "Very Good", "Excellent"];
+                return x [index]
+              }
+            },
+            display: true
           },
         },
       },

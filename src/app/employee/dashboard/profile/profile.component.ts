@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  clicked = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  edit(event: any) {
+    if (event.target.type ==='submit') {
+      this.clicked = false
+    }
+  }
 }

@@ -82,6 +82,8 @@ mat-drawer {
     position: fixed;
     top: 70px;
     cursor: pointer;
+    overflow-y: hidden;
+
 }
 
 mat-drawer button {
@@ -105,11 +107,15 @@ mat-drawer button {
 mat-drawer-content {
     padding: 25px;
     background-color: #F9F9F9;
-    overflow-y: hidden;
 }
 
 .home {
     display: flex;
+    h4 {
+        font-weight: 600;
+        font-size: 14px;
+        font-family: Verdana;
+    }
 }
 
 .active {
