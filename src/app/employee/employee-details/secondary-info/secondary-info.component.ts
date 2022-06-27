@@ -28,7 +28,7 @@ export class SecondaryInfoComponent implements OnInit {
 
   onSubmit() {
     if (this.secondaryForm.valid) {
-      this.empDetails.filled = true
+      this.empDetails.filled1 = true
     }
   }
 }

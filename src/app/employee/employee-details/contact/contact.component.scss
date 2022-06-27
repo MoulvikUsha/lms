@@ -58,3 +58,14 @@ mat-card {
     font-weight: 600;
     font-size: 14px;
 }
+
+.phone {
+    .code {
+        border-right: 1px solid black;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1em 0 1em 0;
+    display: flex !important;
+}

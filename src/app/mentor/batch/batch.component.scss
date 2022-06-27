@@ -13,14 +13,15 @@ tr {
 }
 
 input::placeholder {
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: bolder;
 }
 
 table thead {
   background-color: #E9EEF7;
 
   tr th {
-    font-weight: 500;
+    font-weight: bolder;
   }
 }
 
@@ -41,4 +42,9 @@ table thead {
 .action :hover {
   background-color: #086288;
   color: white;
+}
+
+.action button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
 }

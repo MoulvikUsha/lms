@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { MentorComponent } from '../mentor.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,10 +15,11 @@ export class DashboardComponent implements OnInit {
   myChart3: any;
   myChart4: any;
 
-  constructor() { }
+  constructor( private mentor: MentorComponent) { }
 
   ngOnInit(): void {
     this.graphPreview();
+    this.mentor.present = false;
   }
 
   graphPreview() {
@@ -196,8 +198,8 @@ export class DashboardComponent implements OnInit {
               '#FF007C',
             ],
             borderWidth: 0,
-            barThickness: 12,
-            borderRadius: 8,
+            barThickness: 15,
+            borderRadius: 6,
             borderSkipped: false
           },
         ],

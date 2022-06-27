@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mentor',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MentorComponent implements OnInit {
 
-  constructor() { }
+  present: boolean = true;
+  item: string = '';
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  items() {
+    if (this.router.url == '/mentor/batch') {
+      this.item = 'Request List'
+    }
+  }
 }

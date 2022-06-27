@@ -18,7 +18,7 @@ export class PrimaryInfoComponent implements OnInit {
       empName: ['', Validators.required],
       joining: ['', Validators.required],
       birth: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,4}$/), Validators.email,]],
       blood: ['', Validators.required],
       designation: ['', Validators.required],
       gender: ['', Validators.required],

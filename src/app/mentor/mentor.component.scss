@@ -28,6 +28,12 @@ nav {
 .d-flex {
     width: 547px;
     border-radius: 6px;
+
+    input::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: bolder;
+    }
 }
 
 mat-drawer-container {
@@ -112,7 +118,7 @@ small .active {
 
 mat-menu {
     font-size: 12px;
-    font-family: Verdana, Sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -127,4 +133,10 @@ mat-menu {
 .downArrow {
     font-weight: 800;
     font-size: 20px;
+}
+
+.home h4 {
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
