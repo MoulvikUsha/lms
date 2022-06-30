@@ -1,0 +1,19 @@
+.image {
+    border: 1px solid black;
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+}
+
+.employee {
+    display: flex;
+    .name {
+        position: relative;
+        left: 20px;
+        top: 5px;
+        h1,h3 {
+            font-family: 'Open Sans', 'sans-serif';
+            font-weight: bolder;
+        }
+    }
+}
