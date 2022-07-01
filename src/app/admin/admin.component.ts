@@ -19,7 +19,7 @@ export class AdminComponent implements OnInit {
 
   contents = ['Batch', 'Mentor', 'Request']
 
-  items() {
+  ngAfterContentChecked() {
     if (this.router.url == '/admin/batch') {
       this.item = 'Batch'
     } 
