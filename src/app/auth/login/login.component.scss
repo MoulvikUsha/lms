@@ -5,6 +5,25 @@
   background-size: cover;
 }
 
+.loginn {
+  position: relative;
+  top: 43px;
+  width: 75%;
+  margin: auto;
+}
+
+.row {
+  border-radius: 15px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 65%;
+  }
+}
+
 .image {
   background-image: url('/assets/images/bulb.png');
   background-size: cover;
@@ -12,6 +31,7 @@
 }
 
 .details {
+  font-family: 'Open Sans', 'sans-serif';
   background-color: #000000A2;
   border-radius: 0px 13px 13px 0px;
 }
@@ -37,6 +57,15 @@ mat-label {
 
 :host ::ng-deep .mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex .mat-form-field-outline {
   background-color: white !important;
+  border-radius: 7px;
+  height: 40px;
+}
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  display: flex;
+  position: absolute;
+  top: 01em !important;
+  left: 0;
 }
 
 .submit {
@@ -46,6 +75,9 @@ mat-label {
   border-radius: 5px;
   height: 35px;
   justify-content: space-between;
+  button {
+    font-family: 'Open Sans', 'sans-serif';
+  }
 }
 
 .cancel {
@@ -54,7 +86,7 @@ mat-label {
   color: white;
   border-radius: 5px;
 
-  p {
+  button {
     position: relative;
     top: 7px;
     left: 41px;
@@ -62,9 +94,7 @@ mat-label {
 }
 
 .login {
-  position: relative;
-  top: 7px;
-  left: 55px;
+  left: 20px;
   color: white;
 }
 

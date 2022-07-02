@@ -24,6 +24,10 @@ const routes: Routes = [
         path:'emp-list',
         loadChildren: () => import('./emp-list/emp-list.module').then(m => m.EmpListModule)
       },
+      {
+        path:'mock-rating',
+        loadChildren: () => import('./mock-rating/mock-rating.module').then(m => m.MockRatingModule)
+      },
     ]
   },
 ];

@@ -17,7 +17,7 @@
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 950px;
+        max-width: 850px;
     }
 }
 
@@ -28,7 +28,7 @@
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
     display: flex;
     position: absolute;
-    top: 0.95em !important;
+    top: 0.5em !important;
     left: 0;
     right: 0;
     bottom: 0;

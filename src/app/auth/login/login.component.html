@@ -21,10 +21,8 @@
                 </mat-form-field>
               </div>
               <div class="submit">
-                <p class="login">LOGIN</p>
-                <div class="cancel">
-                  <p>CANCEL</p>
-                </div>
+                <button mat-button type="submit" class="login" [disabled]="loginForm.invalid">LOGIN</button>
+                  <button mat-button type="submit" class="cancel">CANCEL</button>
               </div>
             </form>
           </div>

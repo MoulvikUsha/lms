@@ -1,0 +1,39 @@
+.image {
+    border: 1px solid black;
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+}
+
+.employee {
+    display: flex;
+    .name {
+        position: relative;
+        left: 20px;
+        top: 5px;
+        h1,h3 {
+            font-family: 'Open Sans', 'sans-serif';
+            font-weight: bolder;
+        }
+    }
+}
+
+.mock {
+    border: 1px solid #BCBCCB;
+    border-radius: 5px;
+    p {
+        position: relative;
+        bottom: 10px;
+        left: 25px;
+        background-color: white;
+        width: fit-content;
+    }
+}
+
+mat-card {
+    height: 80%;
+}
+
+#demo {
+    height: 250px;
+}

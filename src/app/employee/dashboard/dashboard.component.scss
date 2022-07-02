@@ -26,8 +26,9 @@ nav {
 }
 
 .d-flex {
-    width: 547px;
+    width: 85%;
     border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .user {
@@ -44,10 +45,16 @@ nav {
     display: flex;
 }
 
+input::placeholder {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
 .name {
     position: relative;
     top: 6px;
-    font-family: Verdana, Sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
 }
 
 ::ng-deep button.mat-menu-item:hover {
@@ -57,7 +64,7 @@ nav {
 
 mat-menu {
     font-size: 12px;
-    font-family: Verdana, Sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -111,6 +118,7 @@ mat-drawer-content {
 
 .home {
     display: flex;
+
     h4 {
         font-weight: 600;
         font-size: 14px;
