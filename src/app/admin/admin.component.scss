@@ -56,25 +56,28 @@ mat-drawer-content {
 }
 
 input::placeholder {
-  font: 13px Verdana, Sans-serif;
+  font: 13px 'Open Sans', sans-serif;
 }
 
 mat-drawer-content .home,
-.link {
-  font-weight: 600;
-  font-size: 14px;
-  font-family: Verdana;
+h4 {
+  font-weight: bolder;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .sidenav .side button {
   display: block;
-  width: -webkit-fill-available;
+  width: 0px;
   height: 75px;
   background-size: 26px;
   small {
-    font: 11px Verdana, Sans-serif;
+    font: 11px 'Open Sans', sans-serif;
     position: relative;
     top: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
   }
 }
 
