@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   }
 
   edit(event: any) {
-    if (event.target.type ==='submit') {
+    if (event.target.type === 'submit') {
       this.clicked = false
     }
   }

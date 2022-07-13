@@ -1,154 +1,152 @@
 nav {
-    position: sticky;
-    top: 0px;
-    height: 70px;
-    background-color: #ffffff;
-    z-index: 1;
-    border: 1px solid #0000000A;
+  position: sticky;
+  top: 0px;
+  height: 70px;
+  background-color: #ffffff;
+  z-index: 1;
+  border: 1px solid #0000000a;
 }
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: block !important;
-        flex-basis: auto;
-    }
+  .navbar-expand-lg .navbar-collapse {
+    display: block !important;
+    flex-basis: auto;
+  }
 }
 
 .navbar-brand img {
-    width: 75%;
-    margin-left: 15px;
+  width: 75%;
+  margin-left: 15px;
 }
 
 .search {
-    background: url('/assets/images/search.png') no-repeat scroll 8px 10px;
-    padding-left: 30px;
-    background-color: #F4F5F8;
+  background: url("/assets/images/search.png") no-repeat scroll 8px 10px;
+  padding-left: 30px;
+  background-color: #f4f5f8;
+  margin-top: 10px;
 }
 
 .d-flex {
-    width: 85%;
-    border-radius: 6px;
-    font-family: 'Open Sans', sans-serif;
+  width: 85%;
+  border-radius: 6px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .user {
-    margin-top: 12px;
+  margin-top: 13px;
 
-    img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
+  img {
+    border-radius: 50%;
+  }
 }
 
 .profile {
-    display: flex;
+  display: flex;
 }
 
 input::placeholder {
-    font-weight: bolder;
-    font-size: 14px;
+  font-weight: bolder;
+  font-size: 14px;
 }
 
 .name {
-    position: relative;
-    top: 6px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bolder;
+  position: relative;
+  top: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
 }
 
 ::ng-deep button.mat-menu-item:hover {
-    font-size: 16px;
-    color: #075575;
+  font-size: 16px;
+  color: #075575;
 }
 
 mat-menu {
-    font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
 }
 
 @media (min-width: 768px) {
-    .col-md-2 {
-        flex: 0 0 auto;
-        width: 16.66666667%;
-        display: flex;
-        justify-content: center;
-    }
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .downArrow {
-    font-weight: 800;
-    font-size: 20px;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 mat-drawer-container {
-    height: 100vh;
+  height: 100vh;
 }
 
 mat-drawer {
-    position: fixed;
-    top: 70px;
-    cursor: pointer;
-    overflow-y: hidden;
-
+  position: fixed;
+  top: 70px;
+  cursor: pointer;
+  overflow-y: hidden;
 }
 
 mat-drawer button {
+  display: block;
+  position: relative;
+  top: 35px;
+  border: none;
+  background-color: #086288;
+
+  img {
+    width: 25px;
+  }
+
+  small {
     display: block;
-    position: relative;
-    top: 35px;
-    border: none;
-    background-color: #086288;
-
-    img {
-        width: 25px;
-    }
-
-    small {
-        display: block;
-        color: white;
-        font-weight: 400;
-    }
+    color: white;
+    font-weight: 400;
+  }
 }
 
 mat-drawer-content {
-    padding: 25px;
-    background-color: #F9F9F9;
+  padding: 25px;
+  background-color: #f9f9f9;
 }
 
 .home {
-    display: flex;
+  display: flex;
 
-    h4 {
-        font-weight: bolder;
-        font-size: 13px;
-        font-family: 'Open Sans', sans-serif;
-      }
+  h4 {
+    font-weight: bolder;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+  }
 }
 
 .active {
-    color: #ffffff;
-    background-color: #086288;
+  color: #ffffff;
+  background-color: #086288;
 }
 
 .logout {
-    border: 1px solid #075575;
+  border: 1px solid #075575;
 }
 
 :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: transparent;
-    outline: none !important;
+  color: transparent;
+  outline: none !important;
 }
 
 .mat-form-field {
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    width: 75%;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 75%;
 }
 
 .user img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }

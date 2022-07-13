@@ -25,17 +25,22 @@
   <mat-drawer mode="side" opened class="sidenav">
 
     <div class="side">
-      <button mat-button class="mat-button batch" routerLink="batch" [routerLinkActive]="['active']">
-        <small>Batch</small>
-      </button>
-      <button mat-button class="mat-button mentor" routerLink="mentor" [routerLinkActive]="['active']">
-        <small>Mentor</small>
-      </button>
-      <button mat-button class="mat-button request" routerLink="request" [routerLinkActive]="['active']">
-        <small>Request</small>
-      </button>
+      <div class="batches" [routerLinkActive]="['active']">
+        <button mat-button class="mat-button batch" routerLink="batch" [routerLinkActive]="['active']">
+          <small>Batch</small>
+        </button>
+      </div>
+      <div class="mentors" [routerLinkActive]="['active']">
+        <button mat-button class="mat-button mentor" routerLink="mentor" [routerLinkActive]="['active']">
+          <small>Mentor</small>
+        </button>
+      </div>
+      <div class="requests" [routerLinkActive]="['active']">
+        <button mat-button class="mat-button request" routerLink="request" [routerLinkActive]="['active']">
+          <small>Request</small>
+        </button>
+      </div>
     </div>
-
   </mat-drawer>
 
   <mat-drawer-content>
