@@ -14,10 +14,22 @@ export class RequestComponent implements OnInit {
   }
 
   approve() {
-  
+
   }
 
   reject() {
 
+  }
+
+  emp: any[] = [
+    { id: 1, name: 'John' }
+  ]
+  checked: boolean = false;
+
+  selectAll() {
+    var value = this.checked ? false : true;
+    this.emp.forEach(element => {
+      element.checked = value;
+    });
   }
 }

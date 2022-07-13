@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RequestRoutingModule } from './request-routing.module';
 import { RequestComponent } from './request.component';
 import { ShareModule } from 'src/app/share/share/share.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ShareModule } from 'src/app/share/share/share.module';
   imports: [
     CommonModule,
     RequestRoutingModule,
-    ShareModule
+    ShareModule,
+    FormsModule
   ]
 })
 export class RequestModule { }

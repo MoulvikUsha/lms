@@ -22,4 +22,16 @@ export class MentorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  emp: any[] = [
+    { id: 1, name: 'John' }
+  ]
+
+  checked: boolean = false;
+
+  selectAll() {
+    var value = this.checked ? false : true;
+    this.emp.forEach(element => {
+      element.checked = value;
+    });
+  }
 }

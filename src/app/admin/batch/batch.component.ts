@@ -9,9 +9,9 @@ import { BatchDialogComponent } from '../batch-dialog/batch-dialog.component';
 })
 export class BatchComponent implements OnInit {
 
-  @Input() name= 'Batch';
-  
-  constructor(public dialog: MatDialog) {}
+  @Input() name = 'Batch';
+
+  constructor(public dialog: MatDialog) { }
 
   openDialog() {
     const dialogRef = this.dialog.open(BatchDialogComponent);
@@ -20,9 +20,20 @@ export class BatchComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
+
   ngOnInit(): void {
   }
 
+  emp: any[] = [
+    { id: 1, name: 'John' }
+  ]
 
+  checked: boolean = false;
+
+  selectAll() {
+    var value = this.checked ? false : true;
+    this.emp.forEach(element => {
+      element.checked = value;
+    });
+  }
 }
