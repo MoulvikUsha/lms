@@ -56,7 +56,9 @@ mat-drawer-content {
 }
 
 input::placeholder {
-  font: 13px 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
 }
 
 mat-drawer-content .home,

@@ -8,7 +8,7 @@
 
    p{
        font-weight: 500
-   } 
+   }
 }
 
 tbody,
@@ -75,5 +75,7 @@ table thead {
 }
 
 input::placeholder {
-    font: 13px Verdana, Sans-serif;
-  }
+  font-size: 13px;
+  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+}
